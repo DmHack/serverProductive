@@ -62,17 +62,17 @@ const loginUser = asyncHandler(async (req, res) => {
             .then(function () {
                 res.cookie('access', cryptr.encrypt(generateAccessToken(user._id)), {
                     sameSite: 'none',
-                    secure: true,
+                    secure: false,
                     httpOnly: true,
                 })
                 res.cookie('refresh', cryptr.encrypt(refresh), {
                     sameSite: 'none',
-                    secure: true,
+                    secure: false,
                     httpOnly: true,
                 })
                 res.cookie('aod', cryptr.encrypt(user._id), {
                     sameSite: 'none',
-                    secure: true,
+                    secure: false,
                     httpOnly: true,
                 })
                 res.status(200).json({
