@@ -175,10 +175,6 @@ const exitAkk = asyncHandler(async (req, res) => {
 
 
 const renewAccessToken = asyncHandler(async (req, res) => {
-    console.log('-------------------------------');
-    console.log(req.cookies);
-    console.log('-------------------------------');
-
     const refreshToken = cryptr.decrypt(req.cookies.refresh);
 
     if (!refreshToken) {
