@@ -14,5 +14,6 @@ router.get('/renewAccessToken', renewAccessToken)
 router.get('/getMe', protect, getMe)
 router.get('/proverka', protect, proverka)
 router.get('/exitAkk', protect, exitAkk)
+// router.get('/parserAfisha', parserAfisha);
 
 module.exports = router
